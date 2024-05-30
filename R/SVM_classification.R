@@ -49,6 +49,7 @@ test_data$predictions <- predictions
 # Evaluate the model
 confusionMatrix(predictions, test_data$class)
 
+
 # plot the classifications in the RELSA data
 test_data %>%
   # filter(org_time >= as.POSIXct("2024-06-02 11:00:00", tz = "UTC") & org_time <= as.POSIXct("2024-06-04 07:00:00", tz = "UTC") ) %>%
