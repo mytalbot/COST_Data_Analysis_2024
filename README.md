@@ -21,7 +21,7 @@ procedure can be adapted to other behavior-related data from various sources.
 
 The home cage data are analyzed with a Machine Learning algorithm: a **Support
 Vector Machine** (SVM). This basic example introduces severity thresholds
-based on RELSA values to determine three classes: none, moderate, and high.
+based on RELSA values to determine three classes: none, medium, and high.
 Subsequently, single measurements of activity heart rate and temperature are
 used to classify untrained/new data points. The performance can be assessed with
 regular metrics like accuracy, etc.
