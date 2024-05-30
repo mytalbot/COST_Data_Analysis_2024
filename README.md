@@ -3,24 +3,24 @@ This repository contains two sets of artificial home cage data for demonstration
 purposes. Further, two R scripts are presented on how to analyze each data set.
 
 ## Data
-1. Open Field behavior data, inspired by Gould, T.D. et al. (2009). [1] 
-The Open Field Test. Mood and Anxiety Related Phenotypes in Mice.
-Neuromethods, vol 42. Humana Press, Totowa, NJ. 
+1. Open Field behavior data, inspired by Gould, T.D. et al. (2009). [1] The 
+data were recreated artificially to resemble the Open Field data in the publication.
+They are not the same data but capture the general group difference information.
 
-2. Artificial time series of home cage data with animals in a "Control" and "Disease" 
-group (n=6 per group). The data are annotated and contain hourly measured activity,
-heart rate, and temperature values. The data are also annotated with
-the Relative Severity Assessment (RELSA) score by Talbot et al. (2021). [2] 
-The calculation of the RELSA is not part of this repository and only serves to
-determine classification thresholds.
+2. Artificial time series data of "Control" and "Disease" groups obtained from 
+continous home cage measurements (n=6 per group). The data are annotated and
+contain hourly measured activity, heart rate, and temperature values. 
+The data are also annotated with the Relative Severity Assessment (RELSA) score,
+published by Talbot et al. (2021). [2] The calculation of the RELSA is not part 
+of this repository and only serves to determine classification thresholds.
 
 ## Analyses
 The Open Field data can be analyzed with regular statistics. The script 
 "OF_analysis.R" introduces basic linear models and hypothesis testing. This 
 procedure can be adapted to other behavior-related data from various sources.
 
-The home cage data are analyzed with a Machine Learning algorithm: a Support
-Vector Machine (SVM). This basic example introduces severity thresholds
+The home cage data are analyzed with a Machine Learning algorithm: a **Support
+Vector Machine** (SVM). This basic example introduces severity thresholds
 based on RELSA values to determine three classes: none, moderate, and high.
 Subsequently, single measurements of activity heart rate and temperature are
 used to classify untrained/new data points. The performance can be assessed with
