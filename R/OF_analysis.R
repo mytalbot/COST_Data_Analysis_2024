@@ -5,8 +5,6 @@
 #########################################
 
 # Specify required packages -----------------------------------------------
-library(gt)
-library(dplyr)
 library(ggplot2)
 library(car)
 library(emmeans)

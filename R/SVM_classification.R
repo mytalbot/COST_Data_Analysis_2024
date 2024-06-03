@@ -1,10 +1,14 @@
+#########################################
+# SVM classification of articifial HC data
+# COST TEATIME @BfR (Berlin) 2024
+# by Steven R. Talbot
+#########################################
+
 # Load necessary libraries
-library(tidyverse)
-library(reshape2)
 library(e1071)
 library(caret)
-library(pROC)
 library(ggplot2)
+library(dplyr)
 library(readxl)
 source("./R/aggregate_further.R") # call a helper function
 
@@ -29,8 +33,6 @@ data$class     <- "none"
 data$class[data$relsa >= 0.3 & data$relsa <= 0.8] <- "medium"
 data$class[data$relsa >  0.8] <- "high"
 data$class     <- factor(data$class, levels=c("none","medium","high"))
-
-
 
 
 # SVM preparation and training --------------------------------------------
@@ -75,9 +77,9 @@ test_data %>%
   theme_bw()       +
   ylim(0,3)        +
   theme(legend.position = "top") +
-  geom_hline(yintercept = 1,   linetype="dashed", color = "black",   size=1) +
-  geom_hline(yintercept = 0.3, linetype="dashed", color = "gray60",  size=1) +
-  geom_hline(yintercept = 0.8, linetype="dashed", color = "gray60",  size=1)
+  geom_hline(yintercept = 1,   linetype="dashed", color = "black",   linewidth=1) +
+  geom_hline(yintercept = 0.3, linetype="dashed", color = "gray60",  linewidth=1) +
+  geom_hline(yintercept = 0.8, linetype="dashed", color = "gray60",  linewidth=1)
 
 
 # inspecting specific outliers?
